@@ -1041,3 +1041,99 @@ html,body,#root{width:100%;min-width:0;overflow-x:hidden}
   .progress-steps i{width:25px;height:25px}.onboarding-logo{width:100%}
   .onboarding-actions{grid-template-columns:1fr}.onboarding-actions>.auth-button{width:100%}
 }
+
+/* Login layout sized for desktop screens */
+.auth-shell.with-institutional{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.auth-institutional{padding:clamp(36px,5vw,84px)}
+.institutional-copy{max-width:620px;margin-bottom:clamp(34px,5vh,64px)}
+.institutional-copy>strong{max-width:600px;font-size:clamp(35px,3.2vw,52px)}
+.institutional-copy p{max-width:560px;font-size:clamp(13px,1.05vw,16px)}
+.eco-visual{width:min(100%,620px);padding:clamp(20px,2vw,30px);border-radius:14px}
+.eco-visual-head span{font-size:clamp(10px,.9vw,13px)}
+.eco-visual-head b{padding:6px 9px;font-size:clamp(8px,.7vw,10px)}
+.eco-visual-metric{margin-top:20px;padding:16px;gap:14px}
+.eco-visual-metric span{font-size:clamp(9px,.75vw,11px)}
+.eco-visual-metric strong{font-size:clamp(12px,1vw,15px)}
+.eco-visual-route{height:100px;margin:18px 0;background-size:32px 32px}
+.eco-visual-route:before{top:50px}
+.eco-visual-route>i:nth-child(1){top:51px}.eco-visual-route>i:nth-child(2){top:43px}.eco-visual-route>i:nth-child(3){top:37px}
+.eco-visual-route>b{top:28px}
+.eco-visual-foot{padding-top:15px;font-size:clamp(9px,.75vw,11px)}
+.eco-visual-foot span:first-child{gap:7px}.eco-visual-foot span:first-child i{width:7px;height:7px}
+.auth-main{padding:clamp(36px,5vw,80px)}
+.auth-card.login-card{width:min(100%,560px);padding:clamp(36px,4vw,58px);border-radius:14px}
+.login-card .auth-heading{margin-bottom:30px}
+.login-card .auth-heading h1{font-size:clamp(28px,2.2vw,36px)}
+.login-card .auth-heading p{font-size:clamp(13px,1vw,15px)}
+.login-card .auth-form{gap:19px}
+.login-card .auth-field{gap:8px;font-size:clamp(11px,.85vw,13px)}
+.login-card .auth-field input{height:52px;padding:0 15px;font-size:14px}
+.login-card .field-action{font-size:11px}
+.login-card .auth-button{min-height:52px;font-size:13px}
+.login-card .auth-check,.login-card .auth-link,.login-card .auth-card-foot{font-size:11px}
+@media(max-width:900px){
+  .auth-shell.with-institutional{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .auth-card.login-card{padding:24px 0;border-radius:0}
+}
+
+/* Responsive login layout for tablets and phones */
+@media (max-width: 900px) {
+  .auth-shell.with-institutional {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .auth-institutional { display: none; }
+  .auth-main {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 76px clamp(24px, 6vw, 64px) 64px;
+  }
+  .auth-card.login-card {
+    width: min(100%, 520px);
+    padding: clamp(32px, 5vw, 48px);
+  }
+  .auth-mobile-brand { left: clamp(24px, 6vw, 64px); top: 24px; }
+}
+
+@media (max-width: 600px) {
+  .auth-shell.with-institutional { background: #fff; }
+  .auth-main {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 78px 22px 36px;
+    align-items: flex-start;
+  }
+  .auth-mobile-brand { left: 22px; top: 20px; }
+  .auth-card.login-card {
+    width: 100%;
+    padding: 26px 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .login-card .auth-heading { margin-bottom: 24px; }
+  .login-card .auth-heading h1 { font-size: clamp(25px, 7vw, 30px); }
+  .login-card .auth-heading p { font-size: 13px; }
+  .login-card .auth-form { gap: 17px; }
+  .login-card .auth-field { font-size: 12px; }
+  .login-card .auth-field input { height: 50px; font-size: 15px; }
+  .login-card .auth-button { min-height: 50px; }
+  .login-card .auth-card-foot { margin-top: 20px; padding-top: 16px; }
+  .auth-prototype-note { font-size: 10px; line-height: 1.5; }
+}
+
+@media (max-width: 380px) {
+  .auth-main { padding-right: 18px; padding-left: 18px; }
+  .auth-mobile-brand { left: 18px; }
+  .login-card .auth-options { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .login-card .auth-card-foot { line-height: 1.6; }
+}
+
+@media (max-height: 700px) and (min-width: 601px) {
+  .auth-main { align-items: flex-start; overflow-y: auto; }
+  .auth-card.login-card { margin-block: 12px; }
+}
